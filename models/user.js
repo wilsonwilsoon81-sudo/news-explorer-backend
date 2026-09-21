@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
-    default: 'Jacques Cousteau',
+    required: [true, 'El campo nombre es obligatorio'],
     minlength: [2, 'El nombre debe tener al menos 2 caracteres'],
     maxlength: [30, 'El nombre no puede exceder los 30 caracteres'],
   },
